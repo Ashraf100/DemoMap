@@ -1,8 +1,65 @@
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
+    android:id="@+id/main_relativeLayout"
+    android:background="#000000"
     android:layout_height="match_parent"
-    tools:context="com.ace.burning.demomap.MapsActivity" />
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout6">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView_forecast_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000">
+        </android.support.v7.widget.RecyclerView>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:id="@+id/recyclerView_daysforecast_data">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+    <TextView
+        android:id="@+id/lat_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#b7d637"
+        android:layout_marginTop="20dp"
+        android:text="lat"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+     />
+
+    <TextView
+        android:id="@+id/long_textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#b7d637"
+        android:text="long"
+        android:layout_below="@+id/lat_textView"
+        android:layout_alignLeft="@+id/lat_textView"
+        android:layout_alignStart="@+id/lat_textView" />
+
+
+</RelativeLayout>
